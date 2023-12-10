@@ -155,8 +155,8 @@ def predict_midi():
   pm.write("out.midi")
 # %%
 if len(sys.argv) > 1 and sys.argv[1] == "compose":
-    predict_midi()
-  else:
-    train()
-    predict_midi()
+  predict_midi()
+else:
+  train()
+  predict_midi()
 # %%
