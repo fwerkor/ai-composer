@@ -11,7 +11,7 @@ checkpoint_path = 'model/model.ckpt'  # 模型存放路径
 # 制作数据集 ==================================================
 def read_midi_notes():
   midi_inputs = [] # 存放所有的音符
-  filenames = tf.io.gfile.glob("datasets/*.midi")
+  filenames = tf.io.gfile.glob("datasets/*.midi")+tf.io.gfile.glob("datasets/*.mid")
   # 循环所有midi文件
   for f in filenames:
     pm = pretty_midi.PrettyMIDI(f) # 加载一个文件
